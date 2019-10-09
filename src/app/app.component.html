@@ -1,6 +1,6 @@
 <app-header>MyHeader</app-header>
 <main>
-  <app-post-create></app-post-create>
-  <app-post-list>MyListofPosts</app-post-list>
+  <app-post-create (PostCreated) = "onPostAdded($event)"></app-post-create>
+  <app-post-list [posts]="storedPosts"></app-post-list>
 </main>
 <router-outlet></router-outlet>
